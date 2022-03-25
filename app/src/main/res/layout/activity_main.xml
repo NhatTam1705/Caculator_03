@@ -8,30 +8,30 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-<!--group view 1 chứa 1 text view - 13/03/2022 - Nguyễn Nhật Tâm-->
+    <!--group view 1 chứa 1 text view - 13/03/2022 - Nguyễn Nhật Tâm-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
         android:orientation="horizontal">
-<!--text view hiển thị các kết quả tính toán - 13/03/2022 - Nguyễn Nhật Tâm-->
+        <!--text view hiển thị các kết quả tính toán - 13/03/2022 - Nguyễn Nhật Tâm-->
         <TextView
             android:id="@+id/display"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="123456"
+            android:text=""
             android:textAlignment="viewEnd"
             android:textColor="#fff"
             android:textSize="30dp" />
     </LinearLayout>
-<!--group view 2 chứa 4 button tương ứng với 7, 8, 9, ÷ - 13/03/2022 - Hồ Quốc Vinh-->
+    <!--group view 2 chứa 4 button tương ứng với 7, 8, 9, ÷ - 13/03/2022 - Hồ Quốc Vinh-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="-11dp"
         android:layout_weight="0.2"
-        android:orientation="horizontal"
-        android:layout_marginBottom="-11dp">
-<!--button tương ứng với số 7 - 13/03/2022 - Hồ Quốc Vinh-->
+        android:orientation="horizontal">
+        <!--button tương ứng với số 7 - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
             android:id="@+id/button7"
             android:layout_width="wrap_content"
@@ -39,10 +39,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ccc"
+            android:onClick="button7OnClick"
             android:text="7"
             android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với số 8 - 13/03/2022 - Hồ Quốc Vinh-->
+        <!--button tương ứng với số 8 - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
             android:id="@+id/button8"
             android:layout_width="wrap_content"
@@ -50,10 +51,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ccc"
-            android:textColor="#000"
+            android:onClick="button8OnClick"
             android:text="8"
+            android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với số 9 - 13/03/2022 - Hồ Quốc vinh-->
+        <!--button tương ứng với số 9 - 13/03/2022 - Hồ Quốc vinh-->
         <Button
             android:id="@+id/button9"
             android:layout_width="wrap_content"
@@ -61,10 +63,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ccc"
-            android:textColor="#000"
+            android:onClick="button9OnClick"
             android:text="9"
+            android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với phép chia - 13/03/2022 - Hồ Quốc Vinh-->
+        <!--button tương ứng với phép chia - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
             android:id="@+id/buttonDiv"
             android:layout_width="wrap_content"
@@ -72,18 +75,19 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ff8812"
-            android:textColor="#000"
+            android:onClick="buttonDivOnClick"
             android:text="÷"
+            android:textColor="#000"
             android:textSize="30dp" />
     </LinearLayout>
-<!--group view 3 chứa 4 button tương ứng với 4, 5, 6, x - 13/03/2022 - Nguyễn Nhật Tâm-->
+    <!--group view 3 chứa 4 button tương ứng với 4, 5, 6, x - 13/03/2022 - Nguyễn Nhật Tâm-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="-11dp"
         android:layout_weight="0.2"
-        android:orientation="horizontal"
-        android:layout_marginBottom="-11dp">
-<!--button tương ứng với số 4 - 13/03/2022 - Nguyễn Nhật Tâm-->
+        android:orientation="horizontal">
+        <!--button tương ứng với số 4 - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
@@ -91,10 +95,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ccc"
-            android:textColor="#000"
+            android:onClick="button4OnClick"
             android:text="4"
+            android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với số 5 - 13/03/2022 - Nguyễn Nhật Tâm-->
+        <!--button tương ứng với số 5 - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
@@ -102,10 +107,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ccc"
-            android:textColor="#000"
+            android:onClick="button5OnClick"
             android:text="5"
+            android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với số 6 - 13/03/2022 - Nguyễn Nhật Tâm-->
+        <!--button tương ứng với số 6 - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
             android:id="@+id/button6"
             android:layout_width="wrap_content"
@@ -113,10 +119,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ccc"
-            android:textColor="#000"
+            android:onClick="button6OnClick"
             android:text="6"
+            android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với phép nhân - 13/03/2022 - Nguyễn Nhật Tâm-->
+        <!--button tương ứng với phép nhân - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
             android:id="@+id/buttonMul"
             android:layout_width="wrap_content"
@@ -124,18 +131,19 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ff8812"
-            android:textColor="#000"
+            android:onClick="buttonMulOnClick"
             android:text="x"
+            android:textColor="#000"
             android:textSize="30dp" />
     </LinearLayout>
-<!--group view 4 chứa 4 button tuơng ứng 1, 2, 3, - - 13/03/2022 - Hồ Quốc vinh-->
+    <!--group view 4 chứa 4 button tuơng ứng 1, 2, 3, - - 13/03/2022 - Hồ Quốc vinh-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="-11dp"
         android:layout_weight="0.2"
-        android:orientation="horizontal"
-        android:layout_marginBottom="-11dp">
-<!--button tương ứng với số 1 - 13/03/2022 - Hồ Quốc Vinh-->
+        android:orientation="horizontal">
+        <!--button tương ứng với số 1 - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
@@ -143,10 +151,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ccc"
-            android:textColor="#000"
+            android:onClick="button1OnClick"
             android:text="1"
+            android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với số 2 - 13/03/2022 - Hồ Quốc Vinh-->
+        <!--button tương ứng với số 2 - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
@@ -154,10 +163,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ccc"
-            android:textColor="#000"
+            android:onClick="button2OnClick"
             android:text="2"
+            android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với số 3 - 13/03/2022 - Hồ Quốc Vinh-->
+        <!--button tương ứng với số 3 - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
@@ -165,10 +175,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ccc"
-            android:textColor="#000"
+            android:onClick="button3OnClick"
             android:text="3"
+            android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với phép trừ - 13/03/2022 - Hồ Quốc Vinh-->
+        <!--button tương ứng với phép trừ - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
             android:id="@+id/buttonSub"
             android:layout_width="wrap_content"
@@ -176,18 +187,19 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ff8812"
-            android:textColor="#000"
+            android:onClick="buttonSubOnClick"
             android:text="-"
+            android:textColor="#000"
             android:textSize="30dp" />
     </LinearLayout>
-<!--group view 5 chứa 3 button tương ứng 0, ., + - 13/03/2022 - Nguyễn Nhật Tâm-->
+    <!--group view 5 chứa 3 button tương ứng 0, ., + - 13/03/2022 - Nguyễn Nhật Tâm-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="-11dp"
         android:layout_weight="0.2"
-        android:orientation="horizontal"
-        android:layout_marginBottom="-11dp">
-<!--button tương ứng với số 0 - 13/03/2022 - Nguyễn Nhật Tâm-->
+        android:orientation="horizontal">
+        <!--button tương ứng với số 0 - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
             android:id="@+id/button0"
 
@@ -196,10 +208,12 @@
             android:layout_margin="1dp"
             android:layout_weight="0.5"
             android:backgroundTint="#ccc"
-            android:textColor="#000"
+            android:onClick="button0OnClick"
             android:text="0"
-            android:textSize="30dp" />
-<!--button tương ứng với dấu chấm - 13/03/2022 - Nguyễn Nhật Tâm-->
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:translationX="0dp" />
+        <!--button tương ứng với dấu chấm - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
             android:id="@+id/buttonDot"
             android:layout_width="0dp"
@@ -207,10 +221,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ccc"
-            android:textColor="#000"
+            android:onClick="buttonDotOnClick"
             android:text="."
+            android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với phép cộng - 13/03/2022 - Nguyễn Nhật Tâm-->
+        <!--button tương ứng với phép cộng - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
             android:id="@+id/buttonAdd"
             android:layout_width="0dp"
@@ -218,18 +233,19 @@
             android:layout_margin="1dp"
             android:layout_weight="0.25"
             android:backgroundTint="#ff8812"
-            android:textColor="#000"
+            android:onClick="buttonAddOnClick"
             android:text="+"
+            android:textColor="#000"
             android:textSize="30dp" />
     </LinearLayout>
-<!--group view 6 chứa 2 button tương ứng C, = - 13/03/2022 - Hồ Quốc Vinh-->
+    <!--group view 6 chứa 2 button tương ứng C, = - 13/03/2022 - Hồ Quốc Vinh-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="-11dp"
         android:layout_weight="0.2"
-        android:orientation="horizontal"
-        android:layout_marginBottom="-11dp">
-<!--button tương ứng với cancel - 13/03/2022 - Hồ Quốc Vinh-->
+        android:orientation="horizontal">
+        <!--button tương ứng với cancel - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
             android:id="@+id/buttonCancel"
             android:layout_width="0dp"
@@ -237,10 +253,11 @@
             android:layout_margin="1dp"
             android:layout_weight="0.5"
             android:backgroundTint="#ff8812"
-            android:textColor="#000"
+            android:onClick="buttonCancelOnClick"
             android:text="C"
+            android:textColor="#000"
             android:textSize="30dp" />
-<!--button tương ứng với dấu bằng - 13/03/2022 - Hồ Quốc Vinh-->
+        <!--button tương ứng với dấu bằng - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
             android:id="@+id/buttonEqual"
             android:layout_width="0dp"
@@ -248,8 +265,9 @@
             android:layout_margin="1dp"
             android:layout_weight="0.5"
             android:backgroundTint="#ff8812"
-            android:textColor="#000"
+            android:onClick="buttonEqualOnClick"
             android:text="="
+            android:textColor="#000"
             android:textSize="30dp" />
     </LinearLayout>
 
