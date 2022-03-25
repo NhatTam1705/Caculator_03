@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     public void equalOnClick(View view) {
         Double result = null;
         ScriptEngine engine = new ScriptEngineManager().getEngineByName("rhino");
-
         try {
             result = (double) engine.eval(workings);
         } catch (ScriptException e) {
