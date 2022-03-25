@@ -9,13 +9,12 @@
     tools:context=".MainActivity">
 
     <!--group view 1 chứa 1 text view - 13/03/2022 - Nguyễn Nhật Tâm-->
-    <LinearLayout
-        style="@style/LayoutNumberStyle">
+    <LinearLayout style="@style/LayoutNumberStyle">
         <!--text view hiển thị các kết quả tính toán - 13/03/2022 - Nguyễn Nhật Tâm-->
         <TextView
             android:id="@+id/display"
-            android:text = "0"
-            style = "@style/TextViewStyle" />
+            style="@style/TextViewStyle"
+            android:text="0" />
     </LinearLayout>
     <!--group view 2 chứa 4 button tương ứng với 7, 8, 9, ÷ - 13/03/2022 - Hồ Quốc Vinh-->
     <LinearLayout
@@ -23,48 +22,50 @@
         android:layout_marginBottom="-11dp">
         <!--button tương ứng với số 7 - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
-            android:id="@+id/button7"
             style="@style/FourButtonStyle"
+            android:onClick="sevenOnClick"
             android:text="7" />
         <!--button tương ứng với số 8 - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
-            android:id="@+id/button8"
             style="@style/FourButtonStyle"
+            android:onClick="eightOnClick"
             android:text="8" />
         <!--button tương ứng với số 9 - 13/03/2022 - Hồ Quốc vinh-->
         <Button
-            android:id="@+id/button9"
             style="@style/FourButtonStyle"
+            android:onClick="nineOnClick"
             android:text="9" />
         <!--button tương ứng với phép chia - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
-            android:id="@+id/buttonDiv"
             style="@style/FourButtonStyle"
+            android:backgroundTint="#ff8812"
+            android:onClick="divOnClick"
             android:text="÷" />
     </LinearLayout>
     <!--group view 3 chứa 4 button tương ứng với 4, 5, 6, x - 13/03/2022 - Nguyễn Nhật Tâm-->
     <LinearLayout
-        android:layout_marginBottom="-11dp"
-        style="@style/LayoutNumberStyle">
+        style="@style/LayoutNumberStyle"
+        android:layout_marginBottom="-11dp">
         <!--button tương ứng với số 4 - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
-            android:id="@+id/button4"
             style="@style/FourButtonStyle"
+            android:onClick="fourOnClick"
             android:text="4" />
         <!--button tương ứng với số 5 - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
-            android:id="@+id/button5"
             style="@style/FourButtonStyle"
+            android:onClick="fiveOnClick"
             android:text="5" />
         <!--button tương ứng với số 6 - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
-            android:id="@+id/button6"
             style="@style/FourButtonStyle"
+            android:onClick="sixOnClick"
             android:text="6" />
         <!--button tương ứng với phép nhân - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
             style="@style/FourButtonStyle"
             android:backgroundTint="#ff8812"
+            android:onClick="mulOnClick"
             android:text="x" />
     </LinearLayout>
     <!--group view 4 chứa 4 button tuơng ứng 1, 2, 3, - - 13/03/2022 - Hồ Quốc vinh-->
@@ -73,24 +74,24 @@
         android:layout_marginBottom="-11dp">
         <!--button tương ứng với số 1 - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
-            android:id="@+id/button1"
             style="@style/FourButtonStyle"
+            android:onClick="oneOnClick"
             android:text="1" />
         <!--button tương ứng với số 2 - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
-            android:id="@+id/button2"
             style="@style/FourButtonStyle"
+            android:onClick="twoOnClick"
             android:text="2" />
         <!--button tương ứng với số 3 - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
-            android:id="@+id/button3"
             style="@style/FourButtonStyle"
+            android:onClick="threeOnClick"
             android:text="3" />
         <!--button tương ứng với phép trừ - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
-            android:id="@+id/buttonSub"
             style="@style/FourButtonStyle"
             android:backgroundTint="#ff8812"
+            android:onClick="minusOnClick"
             android:text="-" />
     </LinearLayout>
     <!--group view 5 chứa 3 button tương ứng 0, ., + - 13/03/2022 - Nguyễn Nhật Tâm-->
@@ -99,41 +100,41 @@
         android:layout_marginBottom="-11dp">
         <!--button tương ứng với số 0 - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
-            android:id="@+id/button0"
             style="@style/FourButtonStyle"
             android:layout_weight="0.29"
+            android:onClick="zeroOnClick"
             android:text="0" />
         <!--button tương ứng với dấu chấm - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
-            android:id="@+id/buttonDot"
             style="@style/FourButtonStyle"
             android:layout_width="0dp"
+            android:onClick="decimalOnClick"
             android:text="." />
         <!--button tương ứng với phép cộng - 13/03/2022 - Nguyễn Nhật Tâm-->
         <Button
-            android:id="@+id/buttonAdd"
             style="@style/FourButtonStyle"
             android:layout_width="0dp"
             android:backgroundTint="#ff8812"
+            android:onClick="plusOnClick"
             android:text="+" />
     </LinearLayout>
     <!--group view 6 chứa 2 button tương ứng C, = - 13/03/2022 - Hồ Quốc Vinh-->
     <LinearLayout
-        android:layout_marginBottom="-11dp"
-        style="@style/LayoutNumberStyle">
+        style="@style/LayoutNumberStyle"
+        android:layout_marginBottom="-11dp">
         <!--button tương ứng với cancel - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
-            android:id="@+id/buttonCancel"
             style="@style/FourButtonStyle"
             android:layout_weight="0.5"
             android:backgroundTint="#ff8812"
+            android:onClick="clearOnClick"
             android:text="C" />
         <!--button tương ứng với dấu bằng - 13/03/2022 - Hồ Quốc Vinh-->
         <Button
-            android:id="@+id/buttonEqual"
             style="@style/FourButtonStyle"
             android:layout_weight="0.5"
             android:backgroundTint="#ff8812"
+            android:onClick="equalOnClick"
             android:text="=" />
     </LinearLayout>
 
